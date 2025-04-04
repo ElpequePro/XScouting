@@ -1,11 +1,14 @@
-import './App.css';
-import Navigation from './Navigation';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+import Main from './Main';
 
 function App() {
   return (
-    <div className="App">
-      <Navigation />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/*" element={<Main />} />
+      </Routes>
+    </Router>
   );
 }
 
